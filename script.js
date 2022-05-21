@@ -67,9 +67,6 @@ newDiscussion.addEventListener('submit', event => {
   }
   agoraStatesDiscussions.unshift(addNewDiscussion);
   
-  while(ul.children.length > 1) {
-    ul.removeChild(ul.lastChild);
-  }
-
+  ul.innerHTML = "";
   render(ul);
 });
