@@ -53,7 +53,7 @@ const render = (element) => {
 const ul = document.querySelector("ul.discussions__container");
 render(ul);
 
-// new discussion submit section
+// new discussion submit section ----->
 const newDiscussion = document.querySelector('form');
 
 newDiscussion.addEventListener('submit', event => {
@@ -67,9 +67,6 @@ newDiscussion.addEventListener('submit', event => {
   }
   agoraStatesDiscussions.unshift(addNewDiscussion);
   
-  while(ul.children.length > 1) {
-    ul.removeChild(ul.lastChild);
-  }
-
+  ul.innerHTML = "";
   render(ul);
 });
